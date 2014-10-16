@@ -14,5 +14,11 @@ const Constants {
 	SOMETHING = 1
 }
 
+struct Point {
+	int x
+	int y
+	int length()
+}
+
 Dummy makeMeADummy()
 void main()
