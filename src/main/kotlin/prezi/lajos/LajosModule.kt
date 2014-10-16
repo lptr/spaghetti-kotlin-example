@@ -1,10 +1,11 @@
 package prezi.lajos
 
 object LajosModule {
-	fun doThis() {
-		console.log("Hello Kotlin!")
+	fun makeMeADummy(): Dummy {
+		return DummyImpl()
 	}
 	fun main() {
-		doThis()
+		console.log("Hello Kotlin!")
+		console.log("10 + 20 = : " + makeMeADummy().add(10, 20))
 	}
 }
