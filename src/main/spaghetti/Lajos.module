@@ -4,6 +4,7 @@ interface Dummy {
 	int add(int a, int b)
 	int ordinal(Values value)
 	<T> T identity(T value)
+	void callback(int value, int->void callback)
 }
 
 enum Values {

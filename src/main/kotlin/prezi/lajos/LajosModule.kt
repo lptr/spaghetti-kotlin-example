@@ -19,5 +19,8 @@ object LajosModule {
 			}
 		} as Point<Int>
 		console.log("Point", dummy.identity(point), "length =", point.length());
+		dummy.callback(12, { value ->
+			console.log("Callback called with", value)
+		})
 	}
 }
