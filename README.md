@@ -30,3 +30,5 @@ Running application...
 + node build/spaghetti/application/application.js
 Hello Kotlin!
 ```
+
+That `Hello Kotlin!` is coming from our Spaghetti code.
