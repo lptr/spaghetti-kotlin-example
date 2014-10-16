@@ -3,6 +3,7 @@ module prezi.lajos as LajosModule
 interface Dummy {
 	int add(int a, int b)
 	int ordinal(Values value)
+	<T> T identity(T value)
 }
 
 enum Values {

@@ -6,6 +6,10 @@ class DummyImpl : Dummy {
 	}
 
 	override fun ordinal(value:Int):Int {
-		return value;
+		return value
+	}
+
+	override fun <T> identity(value:T):T {
+		return value
 	}
 }
