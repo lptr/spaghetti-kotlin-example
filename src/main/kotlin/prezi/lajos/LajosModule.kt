@@ -6,6 +6,7 @@ object LajosModule {
 	}
 	fun main() {
 		console.log("Hello Kotlin!")
+		console.log("This is Spaghetti " + Spaghetti.getSpaghettiVersion())
 		console.log("10 + 20 = : " + makeMeADummy().add(10, 20))
 	}
 }
