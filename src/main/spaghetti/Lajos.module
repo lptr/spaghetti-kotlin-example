@@ -10,5 +10,9 @@ enum Values {
 	BELA
 }
 
+const Constants {
+	SOMETHING = 1
+}
+
 Dummy makeMeADummy()
 void main()
