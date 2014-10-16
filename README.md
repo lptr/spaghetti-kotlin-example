@@ -5,6 +5,13 @@ Spaghetti Kotlin example
 
 	https://github.com/JetBrains/kotlin/releases/download/build-0.9.66/kotlin-compiler-0.9.66.zip
 
+2. Clone and build Spaghetti from the `kotlin-support` branch
+
+	$ git clone --branch kotlin-support https://github.com/prezi/spaghetti
+	$ cd spaghetti
+	$ ./gradlew install installApp
+	$ export PATH=`pwd`/spaghetti/build/install/spaghetti/bin:$PATH
+
 2. Run `./build.sh`
 
 You should see something like this:
