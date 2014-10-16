@@ -1,0 +1,21 @@
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.log
+temp
+
+.idea
+*.iml
+*.ipr
+*.iws
+out/
+gen/
+classes/
+
+.gradle/
+build/
+
+.temp/
+
+kotlinc/

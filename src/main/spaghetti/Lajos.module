@@ -1,0 +1,8 @@
+module prezi.lajos as LajosModule
+
+interface Dummy {
+	int add(int a, int b)
+}
+
+void doThis()
+void main()
