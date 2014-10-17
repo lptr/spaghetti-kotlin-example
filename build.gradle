@@ -1,0 +1,78 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+
+	dependencies {
+		classpath "com.prezi.spaghetti:gradle-spaghetti-plugin:+"
+	}
+}
+
+allprojects {
+	apply plugin: "base"
+}
+
+subprojects {
+	apply plugin: "spaghetti"
+
+	spaghetti {
+		language "kotlin"
+	}
+
+	task compileKotlin(type: Exec) {
+		dependsOn generateHeaders
+		def srcDir = file("src/main/kotlin")
+		inputs.dir srcDir
+		def outputFile = file("$buildDir/compiled-kotlin/module.js")
+		ext.outputFile = outputFile
+		outputs.file outputFile
+		commandLine \
+			"$rootDir/tools/kotlinc/bin/kotlinc-js",
+			"-library-files", "$rootDir/tools/kotlinc/lib/kotlin-jslib.jar",
+			"-output-prefix", "$rootDir/tools/kotlinc/lib/kotlin.js",
+			"-output", outputFile,
+			srcDir, generateHeaders.outputDirectory
+	}
+
+	task bundleModule(type: com.prezi.spaghetti.gradle.BundleModule) {
+		dependsOn compileKotlin
+		inputFile compileKotlin.outputFile
+	}
+
+	task zipModule(type: Zip) {
+		dependsOn bundleModule
+		from bundleModule.outputDirectory
+	}
+
+	artifacts {
+		modules(zipModule)
+	}
+}
+
+project(":lajos") {
+	dependencies {
+		modules project(path: ":bela", configuration: "modules")
+	}
+}
+
+project(":app") {
+	dependencies {
+		modules project(path: ":lajos", configuration: "modules")		
+	}
+
+	task packageApplication(type: com.prezi.spaghetti.gradle.PackageApplication) {
+		mainModule "prezi.lajos"
+		execute true
+		type "node"
+	}
+
+	task run(type: Exec) {
+		dependsOn packageApplication
+		commandLine "node", "${packageApplication.outputDirectory}/application.js"
+	}
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion "2.1"
+}
