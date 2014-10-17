@@ -1,4 +1,4 @@
-module prezi.lajos as LajosModule
+module prezi.bela
 
 interface Dummy {
 	int add(int a, int b)
@@ -12,15 +12,4 @@ enum Values {
 	BELA
 }
 
-const Constants {
-	SOMETHING = 1
-}
-
-struct Point<T> {
-	T x
-	T y
-	T length()
-}
-
 Dummy makeMeADummy()
-void main()

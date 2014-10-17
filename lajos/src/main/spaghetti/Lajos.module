@@ -1,0 +1,16 @@
+module prezi.lajos as LajosModule
+
+import prezi.bela.Dummy
+
+const Constants {
+	SOMETHING = 1
+}
+
+struct Point<T> {
+	T x
+	T y
+	T length()
+}
+
+Dummy makeMeADummy()
+void main()

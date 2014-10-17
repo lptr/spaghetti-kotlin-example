@@ -1,8 +1,12 @@
 package prezi.lajos
 
+import prezi.bela.BelaModule
+import prezi.bela.Dummy
+import prezi.bela.Values
+
 object LajosModule {
 	fun makeMeADummy(): Dummy {
-		return DummyImpl()
+		return BelaModule.makeMeADummy()
 	}
 	fun main() {
 		var dummy = makeMeADummy()

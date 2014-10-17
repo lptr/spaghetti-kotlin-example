@@ -5,7 +5,7 @@ Spaghetti Kotlin example
 
 		https://github.com/JetBrains/kotlin/releases/download/build-0.9.66/kotlin-compiler-0.9.66.zip
 
-2. Clone and build Spaghetti from the `kotlin-support` branch
+2. Download and install the latest Spaghetti:
 
 		$ git clone --branch kotlin-support https://github.com/prezi/spaghetti
 		$ cd spaghetti
@@ -36,6 +36,7 @@ Loaded generators for [haxe, js, kotlin, typescript]
 Running application...
 + node build/spaghetti/application/application.js
 Hello Kotlin!
+This is Spaghetti 2.0-SNAPSHOT
 ```
 
-That `Hello Kotlin!` is coming from our Spaghetti code.
+That `Hello Kotlin!` etc. is coming from our Spaghetti code.

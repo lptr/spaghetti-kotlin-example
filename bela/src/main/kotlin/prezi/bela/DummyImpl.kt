@@ -1,4 +1,4 @@
-package prezi.lajos
+package prezi.bela
 
 class DummyImpl : Dummy {
 	override fun add(a:Int, b:Int):Int {
