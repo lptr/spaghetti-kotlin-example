@@ -17,5 +17,3 @@ classes/
 build/
 
 .temp/
-
-kotlinc/

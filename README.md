@@ -1,20 +1,7 @@
 Spaghetti Kotlin example
 ========================
 
-1. Download Kotlin compiler 0.9.66 and unzip it into the root folder (it will create a folder called `kotlinc`):
-
-		https://github.com/JetBrains/kotlin/releases/download/build-0.9.66/kotlin-compiler-0.9.66.zip
-
-2. Download and install the latest Spaghetti:
-
-		$ git clone --branch kotlin-support https://github.com/prezi/spaghetti
-		$ cd spaghetti
-		$ ./gradlew install installApp
-		$ export PATH=`pwd`/spaghetti/build/install/spaghetti/bin:$PATH
-
-2. Run `./build.sh`
-
-You should see something like this:
+Run `./build.sh`. You should see something like this:
 
 ```text
 $ ./build.sh
@@ -36,7 +23,7 @@ Loaded generators for [haxe, js, kotlin, typescript]
 Running application...
 + node build/spaghetti/application/application.js
 Hello Kotlin!
-This is Spaghetti 2.0-SNAPSHOT
+This is Spaghetti 2.0-51-gcbad234
 ```
 
 That `Hello Kotlin!` etc. is coming from our Spaghetti code.
